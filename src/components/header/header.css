@@ -1,0 +1,39 @@
+.header
+{
+    height:7%;
+    width:100%;
+    /* border:1px solid white; */
+    border-bottom:1px solid rgb(214, 214, 214);
+    background:var(--primary-color);
+    transition:all 0.3s ease;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    box-sizing:border-box;
+    padding:0px 30px;
+    color:var(--text-color);
+}
+
+.left{
+    width:300px;
+}
+.right{
+    display:flex;
+    justify-content: space-between;
+    width: 160px;
+    align-items:Center;
+    margin-right:55px;
+}
+#addTask{
+    background:var(--button-primary);
+    border:none;
+    color:white;
+    width:120px;
+    height:40px;
+    border-radius:20px;
+     font-weight:600;
+}
+.right img{
+    height:20px;
+    width:5px;
+}
