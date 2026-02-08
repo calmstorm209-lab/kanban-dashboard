@@ -13,6 +13,12 @@ function Aside() {
     document.documentElement.className = dark ? 'dark' : 'light'
   }, [dark])
 
+  const handleAddColumn = () => {
+    const name = window.prompt('Enter new column name:')
+    if (!name) return
+    window.dispatchEvent(new CustomEvent('addColumn', { detail: { name } }))
+  }
+
   return (
     <div className="mainAside">
       <div className={`aside ${sideBar ? 'show' : 'hide'}`}>
@@ -22,9 +28,9 @@ function Aside() {
         </div>
 
         <div className="nav-bars">
-          <div className="platform nav">
+          <div className="platform nav" onClick={handleAddColumn}>
             <img src={image} />
-            Platform launch
+            + Add Column
           </div>
         </div>
 
